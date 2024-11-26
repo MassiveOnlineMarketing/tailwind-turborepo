@@ -5,7 +5,7 @@ import Item from '@/components/Item'
 export default async function Home() {
   return (
     <main>
-      <h1 className="px-2 py-4 text-4xl md:text-5xl text-custom-color">App Router</h1>
+      <h1 className="px-2 py-4 text-4xl md:text-5xl text-custom-color text-custom-color-2">App Router</h1>
       <Button />
       <Item />
     </main>

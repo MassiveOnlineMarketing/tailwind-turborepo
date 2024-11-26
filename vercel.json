@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/app-router/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": "apps/app-router/.next"
+      }
+    },
+    {
+      "src": "apps/pages-router/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": "apps/pages-router/.next"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/docs",
+      "dest": "/apps/pages-router/docs"
+    },
+    {
+      "src": "/docs/(.*)",
+      "dest": "/apps/pages-router/docs/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/apps/app-router/$1"
+    }
+  ],
+  "env": {
+    "PNPM_VERSION": "8.0.0"
+  }
+}
