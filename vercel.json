@@ -9,21 +9,21 @@
       }
     },
     {
-      "src": "apps/pages-router/package.json",
+      "src": "apps/syntax-ts/package.json",
       "use": "@vercel/next",
       "config": {
-        "distDir": "apps/pages-router/.next"
+        "distDir": "apps/syntax-ts/.next"
       }
     }
   ],
   "routes": [
     {
       "src": "/docs",
-      "dest": "/apps/pages-router/docs"
+      "dest": "/apps/syntax-ts/docs"
     },
     {
       "src": "/docs/(.*)",
-      "dest": "/apps/pages-router/docs/$1"
+      "dest": "/apps/syntax-ts/docs/$1"
     },
     {
       "src": "/(.*)",
