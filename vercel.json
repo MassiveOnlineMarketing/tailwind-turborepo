@@ -7,9 +7,24 @@
       "config": {
         "distDir": "apps/app-router/.next"
       }
+    },
+    {
+      "src": "apps/syntax-ts/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": "apps/syntax-ts/.next"
+      }
     }
   ],
   "routes": [
+    {
+      "src": "/docs",
+      "dest": "/apps/syntax-ts/docs"
+    },
+    {
+      "src": "/docs/(.*)",
+      "dest": "/apps/syntax-ts/docs/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/apps/app-router/$1"
